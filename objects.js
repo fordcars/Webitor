@@ -133,7 +133,7 @@ function addSimpleObject(type, point) // Simple objects. Point: object coords
 			break;
 			
 		case "slipzone":
-			object = newObject([nPoint(point.x - 225, point.y - 75), nPoint(point.x + 225, point.y - 75), nPoint(point.x + 225, point.y + 75), nPoint(point.x - 225, point.y + 75)], type, {friction: 10});
+			object = newObject([nPoint(point.x - 225, point.y - 75), nPoint(point.x + 225, point.y - 75), nPoint(point.x + 225, point.y + 75), nPoint(point.x - 225, point.y + 75)], type, {friction: 1});
 			break;
 			
 		case "polywall":

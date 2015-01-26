@@ -287,7 +287,7 @@ function editSelected()
 			break;
 			
 		case "flagspawn":
-			dataText = "Spawn Timer:";
+			dataText = "Respawn Timer:";
 			dataName = "respawn";
 			dataIsNumber = true;
 			break;
@@ -296,7 +296,7 @@ function editSelected()
 			dataText = "Health:";
 			dataName = "health";
 			dataIsNumber = true;
-			return;
+			break;
 			
 		case "asteroid":
 			dataText = "Size:";
@@ -305,7 +305,7 @@ function editSelected()
 			break;
 			
 		case "asteroidspawn":
-			dataText = "Spawn Timer:";
+			dataText = "Respawn Timer:";
 			dataName = "respawn";
 			dataIsNumber = true;
 			break;

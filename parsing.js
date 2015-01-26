@@ -112,9 +112,9 @@ function getLevelHeader()
 	var currentValue;
 	var values = [["LevelFormat", info.format],
 				  [info.gameType, info.time, info.score],
-				  ["LevelName", info.name],
-				  ["LevelDescription", info.description],
-				  ["LevelCredits", info.credits],
+				  ["LevelName", quoteText(info.name)],
+				  ["LevelDescription", quoteText(info.description)],
+				  ["LevelCredits", quoteText(info.credits)],
 				  ["GridSize", info.gridSize],
 				  "Teams", // Adds team lines here
 				  ["Specials", info.specials],
@@ -140,7 +140,7 @@ function getLevelHeader()
 				currentTeam = info.teams[j];
 				currentTeamColor = getLevelFileColor(currentTeam.color);
 				
-				header += getLine(["Team", currentTeam.name, currentTeamColor.r, currentTeamColor.g, currentTeamColor.b]);
+				header += getLine(["Team", quoteText(currentTeam.name), currentTeamColor.r, currentTeamColor.g, currentTeamColor.b]);
 				header += c.lineEndings; // Adds line ending in the end, too.
 			}
 		}
@@ -219,7 +219,7 @@ function getLevelObjects()
 			case "textitem":
 				currentLineArray = ["TextItem", currentTeamIndex];
 				pushPointsToArray(currentLineArray, currentObject.points);
-				currentLineArray.push(getTextItemSize(currentObject), '"' + currentObject.text + '"');
+				currentLineArray.push(getTextItemSize(currentObject), quoteText(currentObject.text));
 				
 				levelString += getLine(currentLineArray);
 				break;
@@ -232,7 +232,7 @@ function getLevelObjects()
 				break;
 				
 			case "flagspawn":
-				currentLineArray = ["FlagSpawn"];
+				currentLineArray = ["FlagSpawn", currentTeamIndex];
 				pushPointsToArray(currentLineArray, currentObject.points);
 				currentLineArray.push(currentObject.respawn);
 				
@@ -254,7 +254,7 @@ function getLevelObjects()
 				break;
 				
 			case "mine":
-				currentLineArray = ["Mine", currentTeamIndex];
+				currentLineArray = ["Mine"];
 				pushPointsToArray(currentLineArray, currentObject.points);
 				
 				levelString += getLine(currentLineArray);

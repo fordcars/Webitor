@@ -470,6 +470,8 @@ function drawTextItem(layer, textItem, gameGraphics) // Not fast!
 
 	layer.moveTo(firstPoint.x, firstPoint.y);
 	layer.lineTo(secondPoint.x, secondPoint.y);
+	getSquarePath(layer, firstPoint.x, firstPoint.y, 10);
+	
 	layer.stroke();
 	
 	layer.drawCenteredString(textItem.text, centerX, centerY);

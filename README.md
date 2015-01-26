@@ -30,6 +30,7 @@ Here is a list of the currently supported commands. To use these, press the indi
 NOTES:
 - You can't selected objects, you can only select points. If you want to do something, like changing an attribute of an object, select one or more points of it.
 - There is NO undo, be careful!
+- Wall corners look round, but they aren't really
 
 Known bugs:
 - Rotate (r) also changes the scaling of the points, maybe due to floating points?

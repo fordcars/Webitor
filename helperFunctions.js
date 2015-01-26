@@ -122,6 +122,11 @@ function normalizeLineEndings(string)
 	return string;
 }
 
+function quoteText(text)
+{
+	return '"' + text + '"';
+}
+
 function parseSimpleTextDatabase(text) // Returns an array of line objects. Each of them contain .name (string) and .values (array of strings)
 {
 	var parsedText = [];

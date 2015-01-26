@@ -46,11 +46,25 @@ function doControls(layer)
 		dragSelectedPoints(relativeMouse);
 	}
 	
+	if(inp.rightClick)
+	{
+		var dragPoint = cPoint(snappedMouse);
+		deselectAllPoints(); // In-case
+		
+		if(ed.currentWallPoints.length==0)
+		{
+			ed.currentWallPoints.push(cPoint(snappedMouse));
+		}
+		
+		ed.currentWallPoints.push(dragPoint);
+		setDragging(dragPoint, true);
+	}
+	
 	if(inp.clicked) // Complex logic, doh! This is pretty much mouse up, but as an event
 	{
 		var length = ed.currentWallPoints.length;
 		
-		if(length>2) // At least 3 points. (3-1=2)
+		if(length>2) // At least 3 points. (3-1=2). Why 3? Because of the one following the mouse
 		{
 			ed.currentWallPoints.splice(length-1, 1);
 			newWall(ed.currentWallPoints, c.wallWidth);
@@ -68,30 +82,6 @@ function doControls(layer)
 			getSelectedPoints(relativeMouse);
 			ed.dragSelectionCorner = false;
 		}
-	}
-	
-	if(inp.rightClick)
-	{
-		var dragPoint = cPoint(snappedMouse);
-		deselectAllPoints(); // In-case
-		
-		if(ed.currentWallPoints.length==0)
-		{
-			ed.currentWallPoints.push(cPoint(snappedMouse));
-		}
-		
-		ed.currentWallPoints.push(dragPoint);
-		setDragging(dragPoint, true);
-	}
-	
-	if(inp.wheel==1)
-	{
-		layer.$s(c.zoomInSpeed, c.zoomInSpeed);
-		setupGridSpacing(layer);
-	} else if(inp.wheel==-1)
-	{
-		layer.$s(c.zoomOutSpeed, c.zoomOutSpeed);
-		setupGridSpacing(layer);
 	}
 	
 	if(inp.mdown)
@@ -132,6 +122,16 @@ function doControls(layer)
 				dragSelectedPoints(relativeMouse); // Also drags selected points
 			}
 		}
+	}
+	
+	if(inp.wheel==1)
+	{
+		layer.$s(c.zoomInSpeed, c.zoomInSpeed);
+		setupGridSpacing(layer);
+	} else if(inp.wheel==-1)
+	{
+		layer.$s(c.zoomOutSpeed, c.zoomOutSpeed);
+		setupGridSpacing(layer);
 	}
 }
 
