@@ -26,6 +26,9 @@ Here is a list of the currently supported commands. To use these, press the indi
 - 'Ctrl + c': copy selected points
 - 'Ctrl + v': paste selected points
 - '1 to 0': change the current team, for changing object teams
+- Hold space to disable snap-to-grid
+- Hold shift to move faster
+- Scroll to zoom
 
 NOTES:
 - You can't selected objects, you can only select points. If you want to do something, like changing an attribute of an object, select one or more points of it.
