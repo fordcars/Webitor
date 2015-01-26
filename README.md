@@ -29,6 +29,7 @@ Here is a list of the currently supported commands. To use these, press the indi
 - Hold space to disable snap-to-grid
 - Hold shift to move faster
 - Scroll to zoom
+- WASD to move
 
 NOTES:
 - You can't selected objects, you can only select points. If you want to do something, like changing an attribute of an object, select one or more points of it.
