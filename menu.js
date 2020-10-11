@@ -14,6 +14,11 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+// DISABLED FOR SECURITY REASONS! Even though uploading to Pleiades works,
+// there is no encryption whatsoever, which is extremely unsafe. Use at your
+// own risk!
+gLoginEnabled = false;
+
 function createMenuButtons()
 {
 	// UI
@@ -351,22 +356,25 @@ function updateDynamicButtons()
 
 function login()
 {
-	var errorText = "You will not be able to upload to Pleiades unless you login!";
-	
-	ed.username = askUser("To upload your level to Pleiades, please enter your username (or click Cancel): ", "Username");
-	
-	if(!validData(ed.username))
+	if(gLoginEnabled)
 	{
-		alert(errorText);
-		ed.username = false;
-	} else
-	{
-		ed.password = askUser("Please enter your password for the same reasons: ", "Password");
-		
-		if(!validData(ed.password))
+		var errorText = "You will not be able to upload to Pleiades unless you login!";
+
+		ed.username = askUser("To upload your level to Pleiades, please enter your username (or click Cancel): ", "Username");
+
+		if(!validData(ed.username))
 		{
 			alert(errorText);
-			ed.password = false;
+			ed.username = false;
+		} else
+		{
+			ed.password = askUser("Please enter your password for the same reasons: ", "Password");
+
+			if(!validData(ed.password))
+			{
+				alert(errorText);
+				ed.password = false;
+			}
 		}
 	}
 }
