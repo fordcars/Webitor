@@ -7,7 +7,7 @@ Try it out here: https://fordcars.github.io/Webitor/
 
 The code isn't the prettiest, but I learnt a lot writing this, and hopefully I will clean it up in the future.
 
-**Instructions**:
+**Instructions:**
 
 This level editor supports a lot of the 'real' editor's features. You can:
 - Make walls with right click
@@ -31,11 +31,11 @@ Here is a list of the currently supported commands. To use these, press the indi
 - Scroll to zoom
 - WASD to move
 
-NOTES:
+**Notes:**
 - You can't selected objects, you can only select points. If you want to do something, like changing an attribute of an object, select one or more points of it.
 - There is NO undo, be careful!
 - Wall corners look round, but they aren't really
 - Uploading to Pleiades is disabled by default for security (there is no encryption whatsoever!!)
 
-Known bugs:
+**Known bugs:**
 - Rotate (r) also changes the scaling of the points, maybe due to floating points?
