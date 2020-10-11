@@ -1,6 +1,8 @@
 Webitor
 ================
 
+Try it out here: https://fordcars.github.io/Webitor/
+
 Webitor is a javascript level editor for the game Bitfighter (http://bitfighter.org).
 
 This is a work-in-progress project, and I hope to eventually port this to mobile.
@@ -35,6 +37,7 @@ NOTES:
 - You can't selected objects, you can only select points. If you want to do something, like changing an attribute of an object, select one or more points of it.
 - There is NO undo, be careful!
 - Wall corners look round, but they aren't really
+- Uploading to Pleiades is disabled by default for security (there is no encryption whatsoever!!)
 
 Known bugs:
 - Rotate (r) also changes the scaling of the points, maybe due to floating points?
