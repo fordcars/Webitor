@@ -2,11 +2,12 @@ Webitor
 ================
 
 Webitor is a javascript level editor for the game Bitfighter (http://bitfighter.org).
+
 Try it out here: https://fordcars.github.io/Webitor/
 
 The code isn't the prettiest, but I learnt a lot writing this, and hopefully I will clean it up in the future.
 
-Instructions:
+**Instructions**:
 
 This level editor supports a lot of the 'real' editor's features. You can:
 - Make walls with right click
