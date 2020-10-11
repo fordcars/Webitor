@@ -1,11 +1,8 @@
 Webitor
 ================
 
-Try it out here: https://fordcars.github.io/Webitor/
-
 Webitor is a javascript level editor for the game Bitfighter (http://bitfighter.org).
-
-This is a work-in-progress project, and I hope to eventually port this to mobile.
+Try it out here: https://fordcars.github.io/Webitor/
 
 The code isn't the prettiest, but I learnt a lot writing this, and hopefully I will clean it up in the future.
 
