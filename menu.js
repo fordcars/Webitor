@@ -376,6 +376,9 @@ function login()
 				ed.password = false;
 			}
 		}
+	} else
+	{
+		alert("Login is disabled for security reasons.");
 	}
 }
 
